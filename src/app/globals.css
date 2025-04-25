@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Montserrat Alternates;
+}
+main {
+  background: rgba(226, 238, 238, 1);
+}
+
+@keyframes fadeInDown1 {
+  0% {
+    transform: translateY(-200px); 
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);      
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);  
+    opacity: 0;
+  }
+}
+
+.animate-fade-in-down1 {
+  animation: fadeInDown2  20s ease-in-out infinite;
+}
+
+@keyframes fadeInDown2 {
+  0% {
+    transform: translateY(-200px);  
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);     
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);  
+    opacity: 0;
+  }
+ 
+}
+
+.animate-fade-in-down2 {
+  animation: fadeInDown1 20s ease-in-out infinite;
+}
+.animate-fade-in-down4 {
+  animation: fadeInDown1 20s ease-in-out infinite;
+}
+
+
+
+.animate-fade-in-down3 {
+  animation: fadeInDown1 20s ease-in-out infinite;
+}
+
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  header {
+    justify-content: space-between;
+    padding: 0.625rem; 
+  }
+  .ulDiv {
+    width: 48.125rem; 
+  }
+  .ulDiv ul {
+    font-size: 1.0625rem; 
+    gap: 1.875rem; 
+  }
+}
+
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .ulDiv ul {
+    display: none;
+  }
+  header {
+    justify-content: space-between;
+    padding: 1.875rem;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .instant-coffee {
+    display: block;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  header {
+    width: 100vw;
+  }
+  .header-ul {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  header {
+    width: 100vw;
+  }
+  .ulDiv ul {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .instant-coffee {
+    width: 8.1875rem; 
+  }
+  .burger-menu {
+    width: 1.1356rem; 
+  }
+}
+
+@media screen and (max-width: 374px) {
+  header {
+    width: 100vw;
+  }
+  .ulDiv ul {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .instant-coffee {
+    width: 7.5rem; 
+  }
+  .burger-menu {
+    width: 1.1356rem;
+  }
+}
