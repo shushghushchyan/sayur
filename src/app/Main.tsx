@@ -1,17 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react';
 import OurProducts from './OurProducts';
 import GetinTouch from './GetinTouch';
 
-const Main: React.FC = () => {
-  const [scrollY, setScrollY] = useState(0);
-  
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  
+const Main: React.FC = () => {  
   return (
     <main className="bg-[rgba(226,238,238,1)] min-h-screen">
       <div
