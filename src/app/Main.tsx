@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import OurProducts from './OurProducts';
+import GetinTouch from './GetinTouch';
 
 const Main: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -110,6 +111,10 @@ const Main: React.FC = () => {
       <OurProducts />
 
       <img src="/assets/map.svg" alt="map" className="mt-[10.5rem]" />
+     <div className='flex justify-center mt-[10.5rem]'><h1 className='text-[5.625rem] text-[rgba(12,94,67,1)]'>Get in touch</h1></div> 
+     <GetinTouch />
+     <div className='flex justify-center mt-[10.5rem]'><h1 className='text-[5.625rem] text-[rgba(12,94,67,1)]'>Sayur Blog</h1></div> 
+
     </main>
   );
 };
